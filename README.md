@@ -28,8 +28,8 @@ openssl pkcs12 -export -inkey studygroup_private_key.pem -in studygroup_public_k
 
 | Step     | Command                                                      | Descr                                            |
 | -------- | ------------------------------------------------------------ | ------------------------------------------------ |
-| Login #1 | ```gcloud auth activate-service-account --key-file=studygroup_public_key.p12 --password-file=pass studygroup@firm-vertex-365002.iam.gserviceaccount.com``` | Login with password in a file (for automation)   |
-| Login #2 | ```gcloud auth activate-service-account --key-file=studygroup_public_key.p12 --prompt-for-password studygroup@firm-vertex-365002.iam.gserviceaccount.com``` | Login with password prompt for interactive login |
+| Login #1 | ```gcloud auth activate-service-account --key-file=studygroup_public_key.p12 --password-file=pass studygroup@myproject.iam.gserviceaccount.com``` | Login with password in a file (for automation). Create clear text file with password|
+| Login #2 | ```gcloud auth activate-service-account --key-file=studygroup_public_key.p12 --prompt-for-password studygroup@myproject.iam.gserviceaccount.com``` | Login with password prompt for interactive login |
 | ...      | Do rest of the operations as normal. Note revoke will generate warning, but will removed credentials. |                                                  |
 
 Command ref: https://cloud.google.com/sdk/gcloud/reference/auth/activate-service-account
